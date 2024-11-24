@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import {expect, test} from '@playwright/test'
 
 test.describe("Verify Login Failure for Invalid User Credentials", () => {
   test("Verify Login Failure for Banned User Account", async ({ page }) => {

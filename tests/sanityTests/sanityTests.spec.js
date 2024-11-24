@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import {expect, test} from '@playwright/test'
 
 test.describe("test", () => {
   test("2 prodocts add to cart", async ({ page }) => {
