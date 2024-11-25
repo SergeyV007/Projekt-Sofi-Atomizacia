@@ -13,6 +13,7 @@ test.describe("test", () => {
       .locator('[data-test="add-to-cart-sauce-labs-bike-light"]')
       .click();
     await page.locator('[data-test="shopping-cart-link"]').click();
+    // I asked for assertions on the Cart page - In the Project presentation it's on page 13
     await page.locator('[data-test="checkout"]').click();
     await page.locator('[data-test="firstName"]').click();
     await page.locator('[data-test="firstName"]').fill("Sergey");

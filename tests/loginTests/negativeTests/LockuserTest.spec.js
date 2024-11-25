@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test'
 
-test.describe("Verify Login Failure for Invalid User Credentials", () => {
+test.describe("Verify Login Failure for Invalid User Credentials", () => { // Test Suite can be a feature or category title for the area you are testing - something like: "Login Page Error Handling Tests"
   test("Verify Login Failure for Banned User Account", async ({ page }) => {
     await page.goto("https://saucedemo.com");
     await page.locator('[data-test="username"]').click();
@@ -31,7 +31,7 @@ test.describe("Verify Login Failure for Invalid User Credentials", () => {
     await expect(page.locator('[data-test="error"]')).toHaveText("Epic sadface: Username is required");
     
   });
-  test("I don't write the password", async ({ page }) => {
+  test("I don't write the password", async ({ page }) => { //Change this test case name. you did a great job on the other test cases names
     await page.goto("https://saucedemo.com");
     await page.locator('[data-test="username"]').click();
     await page.locator('[data-test="username"]').fill("standard_user"); 
