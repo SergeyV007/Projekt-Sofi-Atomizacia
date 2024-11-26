@@ -11,10 +11,8 @@ test.describe("test", () => {
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
     await page.locator('[data-test="shopping-cart-link"]').click();
-    await page.locator('[data-test="cart-quantity-label"]').click();
-  await page.locator('[data-test="cart-list"] div').filter({ hasText: '1Sauce Labs Bike LightA red' }).locator('[data-test="item-quantity"]').click();
-  await page.locator('[data-test="cart-list"] div').filter({ hasText: '1Sauce Labs Backpackcarry.' }).locator('[data-test="item-quantity"]').click();
-    // I asked for assertions on the Cart page - In the Project presentation it's on page 13
+    await expect(page.locator('.cart_item')).toHaveCount(2);
+
     await page.locator('[data-test="checkout"]').click();
     await page.locator('[data-test="firstName"]').click();
     await page.locator('[data-test="firstName"]').fill("Sergey");

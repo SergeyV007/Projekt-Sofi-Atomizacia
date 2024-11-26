@@ -13,8 +13,8 @@ test.describe("positive login test", () => {
   for (const user of users) {
     test(`Verify Successful Login for All Valid User Credentials - ${user.username}`, async ({ page }) => {
       await page.goto(baseURL);
-      await page.fill("#user-name", user.username);
-      await page.fill("#password", user.password);
+      await page.locator("#user-name").fill(user.username);
+      await page.locator("#password").fill(user.password);
       await page.click("#login-button");
       await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
       await expect(page.locator(".title")).toHaveText("Products");
