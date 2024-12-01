@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test'
 
-test.describe.only("test", () => {
+test.describe("test", () => {
   test("Verify Successful Purchase Process and Order Completion", async ({ page }) => {
     await page.goto("https://saucedemo.com");
   await expect(page.locator('[data-test="username"]')).toBeVisible();
